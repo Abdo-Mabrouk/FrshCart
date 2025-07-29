@@ -19,11 +19,6 @@ import { WishlistContext } from "../../context/wishlistContext";
 function Productdata({ ProductInfo }) {
   const {handelAddPrudoctToCart} = useContext(CarContext)
   const { handeladdProductToWishlist } = useContext(WishlistContext);
-  const isExistInCart = cartItems.find(
-    (ProductInfo) => _id === product.product._id
-  );
-      
-
   return (
     <>
     <div className="grid grid-cols-3 py-5 gap-5 ">
@@ -98,7 +93,10 @@ function Productdata({ ProductInfo }) {
         <div className="quantity flex items-center gap-5">
           <p>quantity:</p>
           <div className="flex items-center gap-5 px-2 py-1 border-2 rounded-sm border-gray-200">
-            <FontAwesomeIcon icon={faMinus} className="cursor-pointer" />
+            <button>
+              <FontAwesomeIcon icon={faMinus} className="cursor-pointer" />
+            </button>
+            
             <p className="num">1</p>
             <FontAwesomeIcon icon={faPlus} className=" cursor-pointer" />
           </div>

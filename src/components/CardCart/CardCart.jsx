@@ -6,9 +6,7 @@ import { CarContext } from "../../context/cart.context";
 import { Link } from "react-router";
 
 function CardCart({detals}) {
-        const { handelremoveItemsFromCart ,handelUpdateQouantity } = useContext(CarContext);
-    console.log(detals);
-    
+    const { handelremoveItemsFromCart ,handelUpdateQouantity } = useContext(CarContext);    
     return (
         <>
         <div className="border-t-2 border-gray-200 py-2 flex flex-col md:flex-row gap-5 items-center justify-between">

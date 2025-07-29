@@ -38,7 +38,6 @@ import Accountfavorites from "./components/Account/Accountfavorites.jsx";
 import AccountAddersses from "./components/Account/AccountAddersses.jsx";
 import AccountPaymentMethods from "./components/Account/AccountPaymentMethods.jsx";
 import AccountDetails from "./components/Account/AccountDetails.jsx";
-import OrderProvider from "./context/Order.context.jsx";
 
 function App() {
   const routaring = createBrowserRouter([
@@ -154,7 +153,6 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <OrderProvider>
                   <SubCategoriestProvider>
           <BrandstProvider>
             <WishlistProvider>
@@ -176,7 +174,6 @@ function App() {
             </WishlistProvider>
           </BrandstProvider>
         </SubCategoriestProvider>
-        </OrderProvider>
       </QueryClientProvider>
     </>
   );

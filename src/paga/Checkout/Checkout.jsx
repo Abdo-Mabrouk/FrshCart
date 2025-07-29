@@ -82,7 +82,6 @@ import PagaMetadata from "../PagaMetadata/PagaMetadata";
     }
     const {cartId ,data} = cartInfo;
     const {totalCartPrice,products} = data;
-    console.log(cartInfo);
     
     return (
         <>
