@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@theme{
+  --animate-slide-in : slide-in 500ms ease-out ;
+
+  @keyframes slide-in {
+    from{
+      transform: translateX(-100%)
+    }
+    to{
+      transform: translateX(0%)
+      
+    }
+  }
+}
+
+@layer base {
+    body {
+      @apply text-gray-700 ;
+      font-family: 'Poppins', sans-serif;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-4 py-2 bg-gray-200 hover:bg-gray-300 transition-colors duration-500 text-gray-700 font-semibold rounded-md cursor-pointer;
+    }
+
+    .form-control {
+        @apply px-3 py-2 rounded-md focus:border-green-600 border-2 border-gray-400/30 focus:outline-none w-full;
+    }
+}
+    .ul .active {
+        @apply text-green-500;
+    }
+    .ull .active {
+        @apply text-green-500 bg-green-100;
+    }
+
+
+@utility container {
+    margin-inline: auto;
+    width: 80%;
+
+    @media (max-width: 850px) {
+        width: 90%;
+    }
+
+    @media (max-width: 400px) {
+        width: 95%;
+    }
+}
+
+body {
+    text-transform: capitalize;
+    background: #F3F4F6;
+}
+body::selection {
+    background-color: #00C951;
+    color: white;
+}
+
+  .swiper-button-next,.swiper-button-prev{
+    @apply size-12! rounded-full bg-green-400/50 after:text-lg! after:text-white
+  }
+  .swiper-pagination-bullet-active{
+    @apply bg-white! px-3! rounded-md!
+  }
+  .image-gallery-slides{
+    @apply h-96! object-cover!
+  }
+  .my-custom-gallery .image-gallery-thumbnail.active{
+    @apply border-green-500!
+  }
+  
