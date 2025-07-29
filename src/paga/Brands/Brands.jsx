@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { BrandsContext } from "../../context/Brands.context";
-import CardBrand from "../../components/cardBrand/cardBrand";
+import CardBrand from "../../components/CardBrand/CardBrand";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useFormik } from "formik";
